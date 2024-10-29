@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin đăng nhập</title>
+</head>
+
+<body>
+    <h1>Thông tin bạn đã nhập</h1>
+    <table border="1" width="300">
+        <tr>
+            <td>Tên đăng nhập</td>
+            <td id="displayUsername"></td>
+        </tr>
+        <tr>
+            <td>Mật khẩu</td>
+            <td id="displayPassword"></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td id="displayGender"></td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td id="displayHobbies"></td>
+        </tr>
+    </table>
+
+    <script>
+        // Lấy dữ liệu từ localStorage
+        document.getElementById("displayUsername").innerHTML = localStorage.getItem("username");
+        document.getElementById("displayPassword").innerHTML = localStorage.getItem("password");
+        document.getElementById("displayGender").innerHTML = localStorage.getItem("gender");
+        document.getElementById("displayHobbies").innerHTML = localStorage.getItem("hobbies");
+    </script>
+</body>
+
+</html>

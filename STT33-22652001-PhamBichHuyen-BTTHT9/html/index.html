@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form xử lý thông tin</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 50px;
+        }
+
+        .wrapper input {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+
+        .wrapper input[type="radio"],
+        .wrapper input[type="checkbox"] {
+            width: auto;
+        }
+
+        .wrapper button {
+            padding: 10px;
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .wrapper button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form id="formInfo">
+            <label for="username">User name</label>
+            <input type="text" id="username" placeholder="Nhập tên đăng nhập">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Nhập mật khẩu">
+
+            <label>Giới tính:</label>
+            <input type="radio" name="gender" value="Nam"> Nam
+            <input type="radio" name="gender" value="Nữ"> Nữ <br>
+
+            <label>Sở thích:</label> <br>
+            <input type="checkbox" value="Cà phê"> Cà phê <br>
+            <input type="checkbox" value="Cà phê"> Cà phê sữa <br>
+            <input type="checkbox" value="Trà sữa"> Trà sữa <br>
+            <input type="checkbox" value="Trà sữa"> Trà trái cây <br>
+            <input type="checkbox" value="Đọc sách"> Đọc báo <br>
+
+            <button type="button" onclick="handleForm()">Nhập</button>
+        </form>
+    </div>
+
+    <script>
+        function handleForm() {
+            // Lấy giá trị từ textbox và password
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Lấy giá trị từ radio button
+            var gender;
+            var radios = document.querySelectorAll("input[name='gender']");
+            radios.forEach(function (radio) {
+                if (radio.checked) {
+                    gender = radio.value;
+                }
+            });
+
+            // Lấy giá trị từ checkbox
+            var hobbies = [];
+            var checkboxes = document.querySelectorAll("input[type='checkbox']");
+            checkboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    hobbies.push(checkbox.value);
+                }
+            });
+
+            // Lưu vào localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+            localStorage.setItem("gender", gender);
+            localStorage.setItem("hobbies", hobbies.join(", "));
+
+            // Mở trang infor.html
+            window.open("infor.html");
+        }
+    </script>
+
+</body>
+
+</html>
