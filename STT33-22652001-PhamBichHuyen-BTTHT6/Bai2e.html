@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Hình Ảnh</title>
+</head>
+
+<body>
+    <img id="slideshow" src="./img/b1.jpg" alt="Image" width="300px" height="300px">
+    <br><br>
+    <button onclick="playSlideshow()">Play</button>
+    <button onclick="stopSlideshow()">Stop</button>
+
+    <script>
+        var images = ["./img/b1.jpg", "./img/b2.jpg",
+            ".img/b3.jpg", "./img/b7.jpg",
+            ".img/b4.jpg", "./img/b8.jpg",
+            ".img/b5.jpg", "./img/b9.jpg",
+            ".img/b6.jpg", "./img/b10.jpg"];
+        var currentIndex = 0;
+        var interval;
+
+        function showImage() {
+            document.getElementById('slideshow').src = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        function playSlideshow() {
+            interval = setInterval(showImage, 1000); // Thay đổi hình sau mỗi 1 giây
+        }
+
+        function stopSlideshow() {
+            clearInterval(interval);
+        }
+    </script>
+</body>
+
+</html>
