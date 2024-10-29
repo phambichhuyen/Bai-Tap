@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px solid rgb(218, 14, 14);
+            padding: 8px;
+            text-align: left;
+            background-color: chartreuse;
+        }
+
+        td {
+            border: 1px solid rgb(218, 14, 14);
+            padding: 8px;
+            list-style-position: inside;
+        }
+
+        .menu-title {
+            text-align: center;
+            font-size: 2.5em;
+            font-style: italic;
+            text-shadow: 3px 3px 5px #a45252;
+            color: #B22222;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .menu li {
+            width: 200px;
+            height: 100%;
+            list-style: none;
+            float: left;
+            line-height: 60px;
+            text-align: center;
+            border-right: 2px solid blue;
+            padding-right: 15px;
+        }
+
+        .menu li:hover {
+            background-color: darkturquoise;
+        }
+
+        .menu li:hover>a {
+            color: rgb(245, 7, 7);
+        }
+
+        .menu-section ul {
+            list-style-type: disc;
+            padding-left: 30px;
+        }
+
+        .menu-section li {
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .search-box input[type="text"] {
+            padding: 5px;
+        }
+
+        .search-box input[type="submit"] {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <header>
+                    <h1 id="BTT" class="menu-title">EXAMPLE CAFE MENU</h1>
+                </header>
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                <div>
+                    <ul class="menu">
+                        <li><a href="http://"><img src="./home.jpeg" alt="Home" width="50" height="60"
+                                    style="float: right;"></a></li>
+                        <li><a href="http://">STARTER</a></li>
+                        <li><a href="http://">MAIN COURSES</a></li>
+                        <li><a href="http://">DESSERTS</a></li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" placeholder="">
+                        <input type="submit" value="Go">
+                    </div>
+                </div>
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                <div class="content">
+                    <!--class="menu-section" id="starter"-->
+                    <h2 style="color: #B22222;">Starter</h2>
+                </div>
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="content">
+                    <ul>
+                        <li>Chestnut and Mushroom Goujons <b><u style="color: red;">(v)</u></b></li>
+                        <li>Goat Cheese <b><u style="color: red;">(v)</u></b></li>
+                        <li><b style="color: rgb(229, 89, 29);">HONEY SOY CHICKEN KEBABS</b>
+                            <b><u style="color: red;">(v)</u></b>
+                        </li>
+                        <li>Seafood Salad <b><u style="color: red;">(v)</u></b></li>
+                    </ul>
+                    <a href="#BTT" style="color: red; font-weight: bold;">Back to top</a>
+
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                <div class="menu-section" id="desserts">
+                    <h2 style="color :#B22222;">Desserts</h2>
+            </th>
+        </tr>
+
+        <tr>
+            <td>
+                <ul>
+                    <li>Lemon Sorbet <b><u style="color: red;">(v)</u></b></li>
+                    <li>Chocolate Mud Pie <b><u style="color: red;">(v)</u></b></li>
+                    <li>Pecan Pie <b><u style="color: red;">(v)</u></b></li>
+                    <li>Selection of fine Cheeses from Around the World <b><u style="color: red;">(v)</u></b>
+                    </li>
+                </ul>
+                <a href="#BTT" style="color: red; font-weight: bold;">Back to top</a>
+                </div>
+            </td>
+        </tr>
+
+        </div>
+        </div>
+    </table>
+</body>
+
+</html>

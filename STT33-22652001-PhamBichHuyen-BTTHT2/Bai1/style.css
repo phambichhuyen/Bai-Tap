@@ -1,0 +1,42 @@
+* {
+    padding: 0px;
+    margin: 0px auto;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid rgb(218, 14, 14);
+    padding: 8px;
+    text-align: left;
+    background-color: antiquewhite;
+}
+
+td {
+    border: 1px solid rgb(218, 14, 14);
+    padding: 8px;
+    text-align: left;
+    list-style-position: inside;
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-style: italic;
+    text-shadow: 3px 3px 5px #a45252;
+    color: #B22222;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.menu-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.menu-section li {
+    margin-bottom: 10px;
+}
