@@ -1,0 +1,20 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+}
+
+.ls-1 {
+    letter-spacing: 10px;
+}
+.img-size {
+    height:auto; 
+    width: 700px;
+}
+.half-size {
+    width: 50%;
+    margin-left: 0;
+}

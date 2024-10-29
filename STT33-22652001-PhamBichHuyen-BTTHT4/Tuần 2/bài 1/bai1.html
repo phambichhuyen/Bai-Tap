@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      font-weight: 600;
+    }
+
+    /* Thêm đổ bóng cho văn bản */
+    .navbar-brand {
+      font-size: 36px;
+      color: #8b0000;
+      text-shadow: 8px 5px 1px rgba(139, 0, 0, 0.25);
+    }
+
+    .content-title {
+      background: #eb9696;
+      color: #8b0000;
+      width: 75%;
+      margin: auto;
+      font-weight: bold;
+      letter-spacing: 15px;
+      padding-left: 20px;
+    }
+
+    .content-items .form-control,
+    .content-items .form-select {
+      padding: 12px 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="bg-light">
+    <!-- title row -->
+    <div class="text-center py-2">
+      <i class="navbar-brand text-uppercase fw-bold fs-3 " href="#">Example cafe menu</i>
+    </div>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #eb9696;">
+      <div class="container">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse justify-content-center text-uppercase" id="navbarNav">
+          <div class="row g-5">
+
+            <div class="col">
+              <ul class="navbar-nav fw-semibold">
+                <li class="nav-item mx-3"><a class="nav-link active " href="#">Home</a></li>
+
+                <li class="border-2 border-end border border-white"></li>
+                <li class="nav-item mx-3 "><a class="nav-link" href="#">Starter</a></li>
+
+                <li class="border-2 border-end border border-white"></li>
+                <li class="nav-item mx-3"><a class="nav-link" href="#">Main Coures</a></li>
+
+                <li class="border-2 border-end border border-white"></li>
+                <li class="nav-item mx-3"><a class="nav-link" href="#">Desserts</a></li>
+
+              </ul>
+            </div>
+            <!-- Search form -->
+            <div class="col-auto">
+              <form class="d-flex">
+                <input class="form-control me-2 fs-6" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Go</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="">
+    <div class="row pt-3">
+      <!-- Danh mục -->
+      <div class="col-md-3">
+        <ul class="list-group px-4">
+          <li class="list-group-item "><a href="#" class="text-decoration-none">Thực đơn</a></li>
+          <li class="list-group-item"><a href="#" class="text-decoration-none">Đặt bàn</a></li>
+          <li class="list-group-item"><a href="#" class="text-decoration-none">Khuyến mãi</a></li>
+          <li class="list-group-item"><a href="#" class="text-decoration-none">Liên hệ</a></li>
+        </ul>
+
+        <br>
+        <br>
+
+        <div style="width: 300px; height: 300px;      box-shadow: 20px 15px 5px rgba(235, 150, 150, .5)" class="rounded-circle m-auto">
+          <img src="images/metting.jpg" class="img-fluid rounded-circle w-100 h-100"
+            style="object-fit: cover; object-position: bottom;" alt="...">
+
+        </div>
+      </div>
+
+      <!-- Nội dung  -->
+      <div class="col-md-6">
+        <div class="content-items">
+          <h1 id="d1" class="content-title">Starters</h1>
+          <ul id="h1">
+            <li>Chestnut and Mushroom Goujons <b class="text-danger">(v)</b> </li>
+            <li>Goat Cheese Salad <b class="text-danger">(v)</b> </li>
+            <li>HONEY SOY CHICKEN KEBABS <b class="text-danger">(v)</b> </li>
+            <li>Seafood Salad <b class="text-danger">(v)</b></li>
+          </ul>
+          <a href="#d1" class="text-danger fw-bold">Back to top</a>
+        </div>
+
+        <br>
+
+        <div class="content-items">
+          <h1 id="d2" class="content-title">Desserts</h1>
+          <ul id="h2">
+            <li>Lemon Sorbet <b class="text-danger">(v)</b> </li>
+            <li>Chocolate Mud Pie <b class="text-danger">(v)</b> </li>
+            <li>Pecan Pie <b class="text-danger">(v)</b> </li>
+            <li>Selection of fine Cheeses from Around the World <b class="text-danger">(v)</b></li>
+          </ul>
+          <a href="#d2" class="text-danger fw-bold">Back to top</a>
+        </div>
+
+        <br>
+
+        <div class="content-items">
+          <h1 id="d3" class="content-title">INFORMATION</h1>
+
+          <form action="">
+            <!-- name -->
+            <div class="row row-cols-2 g-4 pt-3">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+
+              <div class="col">
+                <input type="gmail" class="form-control" placeholder="Email">
+              </div>
+
+              <div class="col">
+                <input type="number" class="form-control" placeholder="Telephone">
+              </div>
+
+              <div class="col">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Việt Nam</option>
+                  <option value="1">USA</option>
+                </select>
+              </div>
+
+              <div class="col">
+                <div class="d-flex align-items-center h-100 gap-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Vietnamese
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Foreigner
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <textarea class="form-control" rows="2">Comment</textarea>
+              </div>
+
+
+              <!-- button -->
+              <div class="d-flex gap-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-warning">Cancel</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- Sự kiện -->
+      <div class="col-md-3 ps-5">
+        <h3 class="text-capitalize fw-bold">Event</h3>
+
+        <div class="d-flex flex-column gap-4">
+          <div class="card" style="width: 75%;">
+            <div style="height: 200px;">
+              <img src="images/regular-metting.jpeg" class="img-fluid w-100 h-100"
+                style="object-fit: cover; object-position: bottom;" alt="...">
+
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Regular Meetings</h5>
+              <p class="card-text">Host your regular learn mettings or activities in the comfort of your ơn private
+                room.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 75%;">
+            <div style="height: 200px;">
+              <img src="images/product-launches.jpg" class="img-fluid w-100 h-100"
+                style="object-fit: cover; object-position: bottom;" alt="...">
+
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Regular Meetings</h5>
+              <p class="card-text">Launch your product with ease in a space that truly fits its image.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- Footer -->
+  <footer class="text-center py-3" style="background-color: #eb9696;">
+    <p class="mb-0">© 2024 Example Cafe. All rights reserved.</p>
+    <p class="mb-0">Theo dõi chúng tôi trên <a href="#" class="text-decoration-none">Facebook</a> | <a href="#"
+        class="text-decoration-none">Instagram</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

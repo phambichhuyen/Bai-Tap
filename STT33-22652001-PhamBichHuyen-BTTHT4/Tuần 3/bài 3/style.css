@@ -1,0 +1,42 @@
+body {
+	font-family: Verdana, Georgia, "Trebuchet MS", Arial, sans-serif;
+	background: #fff;
+  }
+
+  .header--container {
+	background: #CB5C14;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	text-shadow: 3px 4px 6px #000;
+  }
+
+  /* Header styling */
+  #img-header {
+	background: url('images/banner.jpg') no-repeat center center;
+	background-size: cover;
+	height: 100px;
+	text-align: center;
+  }
+
+  /* Navigation bar */
+  #navPyra .nav-link {
+	color: #CB5C14;
+	text-decoration: none;
+  }
+
+  .sidebar-section a {
+	text-decoration: none;
+	color: #CB5C14;
+  }
+
+  /* Footer */
+  footer {
+	background: url('images/footer.jpg') no-repeat center center;
+	background-size: cover;
+	height: 70px;
+	text-align: center;
+	margin-bottom: 0;
+  }

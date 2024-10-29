@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        #div-mid {
+            background: url('images/sample.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            height: 900px;
+        }
+
+        .card {
+            border: 3px solid rgba(224, 187, 132, 0.817);
+            background-color: rgb(245, 237, 208);
+            width: 250px;
+        }
+
+        .van {
+            color: rgb(178, 111, 35);
+            margin: 10px;
+        }
+
+        /* Định vị các block */
+        .right-top-block {
+            top: 10px;
+            right: 10px;
+        }
+
+        .left-center-block {
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        .right-bottom-block {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* Đặt các block ở vị trí tuyệt đối */
+        .position-absolute {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-3">
+        <!-- header -->
+        <header class="d-flex justify-content-end align-items-end">
+            <img src="images/scraps.jpg" alt="hình ảnh" class="img-fluid">
+        </header>
+        <div class="row">
+            <!-- nav -->
+            <nav class="col-md-3 p-3 img-nav--custom">
+                <ul class="nav flex-column color-list--custom menu-left">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Getting Started</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Scrapbooking Tips</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Supply List</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Online Classes</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Sample Pages</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Online Store</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Shopping Cart</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Checkout</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Your Account</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Order Status</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Wish List</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Customer Service</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Newsletter</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#!" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section class="col-md-9 position-relative">
+                <h1 class="text-start color-title--custom">Samples from Online Scrapbooks</h1>
+                <div id="div-mid" class="position-relative">
+                    <!-- Right Top Block -->
+                    <div class="position-absolute right-top-block">
+                        <div class="card p-3">
+                            <p class="van">Cascading Style Sheets (CSS) is a fantastic tool to add layout
+                                to your websites. It can save you a lot of time and it enables
+                                you to design websites in a completely new way. CSS is a must
+                                for anyone working with web design.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Left Center Block -->
+                    <div class="position-absolute left-center-block">
+                        <div class="card p-3">
+                            <p class="van">This tutorial will get you started with CSS in just a few hours.
+                                It is easy to understand and it will teach you all the sophisticated techniques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Bottom Block -->
+                    <div class="position-absolute right-bottom-block">
+                        <div class="card p-3">
+                            <p class="van">Learning CSS is fun. As you go along through the tutorial, remember to
+                                take enough time to properly experiment with what you learn in each lesson.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="text-center mb-0 color-title--custom">
+                <p>ONLINE SCRAPBOOKS &#8901; 212 SUSNET DRIVE &#8901; RICHMOND, KY 40475 &#8901; (859) 555-8100</p>
+            </footer>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

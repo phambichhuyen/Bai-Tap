@@ -1,0 +1,33 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #55cae7c6;
+    margin: 0;
+    padding: 0;
+}
+
+.header--logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 21, 255, 1);
+}
+
+.body--gallery p:first-of-type {
+    font-size: 1.5rem;
+}
+
+.body--gallery p {
+    font-weight: bold;
+    text-shadow: 2px 5px 4px rgba(0, 21, 255, 1);
+    color: rgba(0, 21, 255, 1);
+}
+
+.footer-line {
+    border-top: dotted;
+}
+.header-line {
+    border-bottom: dotted;
+}

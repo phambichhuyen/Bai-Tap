@@ -1,0 +1,21 @@
+.header--container {
+    background-color: rgba(6, 26, 123, 0.826);
+    border-bottom: 1px solid #095fb5;
+}
+
+.header--right__nav a {
+    background-color: rgb(35, 128, 210);
+    color: #fff;
+}
+
+.header--right__nav a:hover {
+    background-color: yellowgreen;
+}
+
+.footer--container {
+    background-color: rgba(43, 51, 94, 0.932);
+}
+.text-shadow {
+text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.7);
+font-style: italic;
+}

@@ -1,0 +1,47 @@
+#header-logo img{
+    height: 100px;
+}
+
+#header-content{
+    letter-spacing: 3px;
+}
+
+#header-nav{
+    text-transform: capitalize;
+}
+
+#header-nav .nav-items:not(.active):hover{
+    color: #333 !important;
+    cursor: pointer;
+}
+
+#header-nav .nav-items:not(.active){
+    color: #fff;
+    transition: .15s;
+}
+
+.main-items + .main-items{
+    margin-top: 30px;
+}
+
+.main-items .card-title{
+    text-transform: capitalize;
+}
+
+.main-items .card-text{
+    color: crimson;
+}
+
+#main-category .category-recipes *{
+    color: crimson;
+}
+
+#main-category .list-group-item{
+    transition: .15s;
+}
+
+#main-category .list-group-item:hover{
+    background-color: rgba(0,0,0,.25);
+    color: #995d6a;
+    cursor: pointer;
+}

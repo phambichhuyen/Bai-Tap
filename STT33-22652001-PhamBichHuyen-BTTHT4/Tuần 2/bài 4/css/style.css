@@ -1,0 +1,50 @@
+
+
+
+header {
+    border-bottom: 2px solid #ea9a40;
+}
+
+.color-list--custom a {
+    color: #3c0643 !important;
+    text-decoration: none;
+}
+
+.color-title--custom {
+    color: #ea9a40;
+}
+
+.color-text--custom {
+    color: #30033a;
+    font-size: 23px;
+    margin-left: 10px;
+}
+
+header img {
+    width: 40%;
+    height: auto;
+    float: right;
+}
+
+.img-nav--custom {
+    background: url(../images/back.jpg) no-repeat;
+    background-size: cover;
+}
+
+.menu-left li {
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #efa550;
+}
+
+
+.border--custom {
+    border-top: 5px solid #eb8f17;
+    border-left: 5px solid #eb8f17;
+    border-right: 5px solid #834e09;
+    border-bottom: 5px solid #834e09;
+}
+
+
+footer {
+    border-top: 2px solid #efa550;
+}
