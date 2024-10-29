@@ -1,0 +1,38 @@
+.header-background {
+  background-image: url("../images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.header-background nav * {
+  color: #fff;
+}
+
+.header-background .nav-item .nav-link.active,
+.header-background a.nav-item:hover i,
+.header-background .nav-item:not(.btn-custom):hover .nav-link {
+  color: var(--active-color);
+}
+
+.header-background .nav-item .nav-link{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn-custom{
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: var(--active-color);
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.btn-custom:hover{
+    background-color: #e69c00;
+    color: #fff;
+}
+
+.header-background .btn-custom:hover .nav-link {
+    color: #fff;
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url("header.css");
+
+:root {
+  --active-color: #ffbe33;
+  --background-dark: #222831;
+  --background-light: #F1F2F3;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #0c0c0c;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.flex-y-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-brand {
+  font-family: "Dancing Script", cursive;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.form-select,
+.form-control,
+.form-select:focus,
+.form-control:focus{
+  border-color: #333;
+  box-shadow: none;
+  padding: 12px 22px;
+}
+
+input[type="checkbox"]{
+  box-shadow: none !important;
+}
+
+.navbar-focus input,
+.navbar-focus input:focus{
+  border-color: var(--active-color);
+}
+
+.navbar-focus input:not([type="checkbox"]):focus{
+  box-shadow: 0 0 0 .25rem rgba(255, 190, 51, .25);
+}
