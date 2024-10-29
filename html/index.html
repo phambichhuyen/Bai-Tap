@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px auto;
+    }
+    
+    .container {
+        margin-top: 50px;
+    }
+    
+    body {
+        background-color: aliceblue;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img src="../img/HEADER.PNG" alt="" style="width: 100%;">
+        <h1 class="text-center">DANH SÁCH THAM GIA ĐỘI ROBOCON KHOA CNTT</h1>
+        <!-- Nút mở modal đăng ký -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal" style="background-color: rgb(78, 178, 236);">
+            Đăng Ký
+        </button>
+
+
+        <!-- Nút đăng NHẬP -->
+        <button type="button" style="color: aliceblue; background-color:rgb(78, 178, 236) ; width: 8%;" ;>
+            Đăng Nhập
+        </button>
+
+
+        <!-- Modal Đăng ký -->
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Form Đăng Ký</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="registrationForm">
+                            <div class="form-group">
+                                <label for="memberId">Mã thành viên</label>
+                                <input type="text" class="form-control" id="memberId" placeholder="K16-xxxxxxxxx" required>
+                                <small class="form-text text-muted">Mẫu: K16-xxxxxxxxx</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Họ và tên</label>
+                                <input type="text" class="form-control" id="name" placeholder="VD: Tran Anh Dung" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="class">Lớp</label>
+                                <input type="text" class="form-control" id="class" placeholder="VD: DHKTPM16BTT" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="joinDate">Ngày tham gia</label>
+                                <input type="date" class="form-control" id="joinDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Điện thoại</label>
+                                <input type="text" class="form-control" id="phone" placeholder="0xxx-xxx-xxx" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="xxxxx@iuh.edu.vn" required>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="saveData()">Lưu</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bảng danh sách -->
+        <table class="table mt-5" id="memberList">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã thành viên</th>
+                    <th>Họ và tên</th>
+                    <th>Lớp</th>
+                    <th>Ngày tham gia</th>
+                    <th>Điện thoại</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let stt = 1;
+
+        function validateMemberId(id) {
+            const pattern = /^K16-\d{9}$/;
+            return pattern.test(id);
+        }
+
+        function validateName(name) {
+            const pattern = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/;
+            return pattern.test(name);
+        }
+
+        function validateClass(className) {
+            const pattern = /^[A-Z0-9]{11}$/;
+            return pattern.test(className);
+        }
+
+        function validateDate(date) {
+            const currentDate = new Date();
+            const inputDate = new Date(date);
+            const timeDiff = inputDate.getTime() - currentDate.getTime();
+            const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            return daysDiff >= 30;
+        }
+
+        function validatePhone(phone) {
+            const pattern = /^0\d{3}-\d{3}-\d{3}$/;
+            return pattern.test(phone);
+        }
+
+        function validateEmail(email) {
+            const pattern = /^[a-zA-Z0-9._%+-]+@iuh\.edu\.vn$/;
+            return pattern.test(email);
+        }
+
+        function saveData() {
+            const memberId = document.getElementById("memberId").value;
+            const name = document.getElementById("name").value;
+            const className = document.getElementById("class").value;
+            const joinDate = document.getElementById("joinDate").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+
+            if (!validateMemberId(memberId)) {
+                alert("Mã thành viên không hợp lệ!");
+                return;
+            }
+            if (!validateName(name)) {
+                alert("Họ tên không hợp lệ!");
+                return;
+            }
+            if (!validateClass(className)) {
+                alert("Lớp không hợp lệ!");
+                return;
+            }
+            if (!validateDate(joinDate)) {
+                alert("Ngày tham gia phải sau ngày hiện tại ít nhất 30 ngày!");
+                return;
+            }
+            if (!validatePhone(phone)) {
+                alert("Số điện thoại không hợp lệ!");
+                return;
+            }
+            if (!validateEmail(email)) {
+                alert("Email không hợp lệ!");
+                return;
+            }
+
+            // Thêm dữ liệu vào bảng
+            const table = document.getElementById("memberList").getElementsByTagName("tbody")[0];
+            const newRow = table.insertRow();
+
+            newRow.insertCell(0).innerText = stt++;
+            newRow.insertCell(1).innerText = memberId;
+            newRow.insertCell(2).innerText = name;
+            newRow.insertCell(3).innerText = className;
+            newRow.insertCell(4).innerText = joinDate;
+            newRow.insertCell(5).innerText = phone;
+            newRow.insertCell(6).innerText = email;
+
+            // Reset form
+            document.getElementById("registrationForm").reset();
+            $('#registerModal').modal('hide');
+        }
+    </script>
+
+</body>
+
+</html>
