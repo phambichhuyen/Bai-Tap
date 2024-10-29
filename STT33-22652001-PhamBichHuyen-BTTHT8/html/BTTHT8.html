@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//css/bootstrap.min.css">
+    <!-- file Bootstrap lỗi -->
+    <script src="..//js/jquery-3.7.1.min.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+
+    <!-- link -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS (bao gồm Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        [class*=col-] {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <img src="..//img/ảnh bơi lội.jpg" alt="" srcset="" id="anh" class="w-100 h-auto">
+            </div>
+        </div>
+
+        <div class="row">
+            <nav class="navbar navbar-expand">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Trang Chủ</a></li>
+                    <li class="nav-item"><a href="#registerModal" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">Đăng kí</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Trợ giúp</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="row">
+            <table id="bangthanhtoan" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 30px;">STT</th>
+                        <th style="width: 90px;">Mã học viên</th>
+                        <th style="width: 130px;">Họ tên</th>
+                        <th style="width: 130px;">Email</th>
+                        <th style="width: 110px;"> Tiền Dịch vụ</th>
+                        <th style="width: 110px;">Tiền đồ dùng</th>
+                        <th style="width: 110px;">Tổng tiền</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentTable">
+                    <tr>
+                        <td>1</td>
+                        <td>123456789</td>
+                        <td>Phạm Bích Huyền</td>
+                        <td>bichhuyen@iuh.edu.vn</td>
+                        <td>30000</td>
+                        <td>20000</td>
+                        <td>50000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th style="width: 400px;">
+                            <div class="d-flex ">
+                                <p class="mb-0">Mã sinh viên: </p>
+                                <div class="d-inline-block border-bottom border-dark border-2 w-50">
+                                </div>
+                        </th>
+                        <th style="width: 400px;">
+                            <div class="d-flex ">
+                                <p class="mb-0">Họ tên: </p>
+                                <div class="d-inline-block border-bottom border-dark border-2 w-50">
+                                </div>
+                        </th>
+                        <th style="width: 400px;">
+                            <div class="d-flex ">
+                                <p class="mb-0">Phòng thi: </p>
+                                <div class="d-inline-block border-bottom border-dark border-2 w-50">
+                                </div>
+                        </th>
+                    </tr>
+                </thead>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase" id="registerModalLabel">Thông tin thanh toán</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-4">
+                        <form>
+                            <div class="row mb-3">
+                                <label for="studentId" class="col-sm-3 col-form-label">Mã học viên: <span
+                                        class="text-danger">*</span></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="studentId" placeholder="xx-yyyyyyyy">
+                                    <span class="text-danger" id="studentIdFeedback" style="display: none;"></span>
+                                    <!-- Thêm phần tử feedback -->
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="fullName" class="col-sm-3 col-form-label">Họ tên: <span
+                                        class="text-danger">*</span> </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Tran Thu Trang">
+                                    <span class="text-danger" id="fullNameFeedback" style="display: none;"></span>
+                                    <!-- Thêm phần tử feedback -->
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="email" class="col-sm-3 col-form-label">
+                                    Email: <span class="text-danger">*</span>
+                                </label>
+
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="trangtran@iuh.edu.vn">
+                                    <span class="text-danger" id="emailFeedback" style="display: none;"></span>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="service" class="col-sm-3 col-form-label">Dịch vụ:</label>
+                                <div class="col-sm-9">
+                                    <select class="form-select" id="service">
+                                        <option selected value="0">Bơi</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="price" class="col-sm-3 col-form-label">Giá tiền:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" value="0" id="price" readonly>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-3 col-form-label">Đồ dùng:</label>
+                                <div class="col-sm-9">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="aoquanbơi">
+                                        <label class="form-check-label" for="aoquanbơi">Áo quần bơi</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="phao">
+                                        <label class="form-check-label" for="phao">Phao</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="kinhboi">
+                                        <label class="form-check-label" for="kinhboi">Kính bơi</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="usedEquipmentPrice" class="col-sm-3 col-form-label">Tiền đồ dùng:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="usedEquipmentPrice" value="0" readonly>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="totalPrice" class="col-sm-3 col-form-label">Tổng tiền:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" value="0" id="totalPrice" readonly>
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-light" data-bs-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-success" id="paymentButton">Thanh toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="..//js/script-custom.js"></script>
+
+</body>
+
+</html>
