@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookStore || Nhà sách trực tuyến</title>
+
+  <!--Bootstrap 5 CSS -->
+  <link href="module/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!--Font Awesome 5-->
+  <link rel="stylesheet" href="module/fontawesome/css/all.min.css" />
+
+  <!-- Popper -->
+
+  <!--Bootstrap JS -->
+  <script src="module/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script src="module/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <!--Jquery -->
+  <script src="module/jquery/jquery-3.7.1.min.js"></script>
+
+  <!-- Link File CSS -->
+  <link rel="stylesheet" href="asset/css/style.css" />
+
+  <!-- link Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- put data in localstogaren -->
+  <script src="asset/js/data.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class=" d-flex row w-100 m-auto px-lg-5 pb-3 pb-lg-0">
+      <!-- Logo -->
+      <div class="logo d-flex justify-content-center col-12 col-lg-auto pt-2 pt-lg-0">
+        <a href="index.html"><img src="asset/image/logo.jpg" alt="BookStore" width="125px" /></a>
+      </div>
+
+      <!-- Thẻ xuống hàng Mobile -->
+      <div class="col-12 col-lg-auto">
+        <hr>
+      </div>
+
+      <!-- Danh mục Pc -->
+      <div class="nav-links d-none d-lg-block col-lg">
+        <a href="index.html">Trang chủ</a>
+        <a href="produce.html">Sản phẩm</a>
+        <a href="imfomation.html">Giới thiệu</a>
+        <a href="#contact">Liên hệ</a>
+      </div>
+
+      <!-- Danh mục Mobile - Btn -->
+      <div class="col-auto right-nav d-lg-none">
+        <i class="fas fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"></i>
+      </div>
+
+      <!-- Danh mục Mobile - Container -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+            etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card & User - Icon -->
+      <div class="col col-lg-4 text-left">
+        <form action="" id="search-form">
+          <div class="input-group">
+            <input type="text" id="search-input" class="form-control" placeholder="Nhập tên sách..."
+              aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="submit" id="Search"><i
+                class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Card & User - Container -->
+      <div class="right-nav d-flex col-auto">
+        <a href="#" class="d-none right-nav-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Tìm kiếm</span>
+        </a>
+        <a href="cart.html" class="cartyuyy right-nav-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Giỏ hàng</span>
+        </a>
+        <div class="dropdown">
+          <a class="right-nav-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>
+            <span id="user">Tài khoản</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="register.html">Đăng ký</a></li>
+            <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="section home">
+    <!-- banner-1 -->
+    <div id="banner-1" class="carousel slide">
+      <div class="carousel-indicators carousel-fade">
+        <button type="button" data-bs-target="#banner-1" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#banner-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#banner-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="product-detail.html?id=7">
+            <img src="asset/image/banner-1.jpg" class="d-block w-100" alt="image" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="product-detail.html?id=8">
+            <img src="asset/image/banner-2.jpg" class="d-block w-100" alt="image" />
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="product-detail.html?id=6">
+            <img src="asset/image/banner3.jpg" class="d-block w-100" alt="image" />
+          </a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#banner-1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#banner-1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- sách nổi bậc -->
+    <section class="section products">
+      <div class="card">
+        <h4 class="card-header">Sách nổi bậc</h4>
+        <div class="card-body">
+          <div class="row row-cols-lg-4 row-cols-2 text-center get_productList">
+            <!-- Produce item here -->
+            <!-- <div class="col">
+                <div class="card mb-3">
+                  <div class="card-img--custom">
+                    <img src="asset/image/book-1.jpg" class="card-img-top" alt="...">
+                  </div>
+                  <div class="card-body text-start">
+                    <a href="#" class="title-prod">Boxy Denim Jacket</a>
+                    <div class="price">
+                      <span>$35</span>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+          </div>
+          <div class="d-flex justify-content-center">
+            <a href="produce.html" class="btn btn--custom mt-3">Xem tất cả</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner 2 -->
+    <section class="section banner-2">
+      <div class="content ">
+        <span class="discount">Nhanh tay nhận ngay giảm giá 25%</span>
+        <h3 class="title">Ưu Đãi Trong Tuần</h3>
+        <p class="description text-wrap">
+          Chào mừng bạn đến với Bookstore! Cửa hàng sách của chúng tôi cung cấp một loạt các sách thuộc mọi thể loại.
+          <br>
+          Dù bạn đang tìm kiếm những cuốn sách bán chạy nhất gần đây, văn học kinh điển hay sách giáo trình <br>
+          chúng tôi đều có thể đáp ứng. <br>
+          Hãy khám phá bộ sưu tập của chúng tôi và tìm ra cuốn sách yêu thích tiếp theo của bạn!
+        </p>
+        <a href="produce.html" class="btn btn--custom">Khám phá tủ sách</a>
+      </div>
+    </section>
+
+    <section class="section blog">
+      <div class="container">
+        <div class="top-sec">
+          <h3>Bài đăng</h3>
+        </div>
+
+        <div class="boxs">
+          <div class="box">
+            <img src="asset/image/blog1.jpg" alt="Blog 1" />
+            <div class="desc-blog">
+              <span>Ngày 19 tháng 6, 2024</span>
+              <h4>Huyền Chip: Cô Gái Đa Tài, Phốt Và Những Cuốn Sách</h4>
+              <a href="#" class="btn btn--custom">Đọc Thêm</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="asset/image/blog2.jpg" alt="Blog 2" />
+            <div class="desc-blog">
+              <span>Ngày 24 tháng 3, 2023</span>
+              <h4>Khiêu Vũ Với Ngòi Bút Năm 2021: Còn Đáng Để Đọc?</h4>
+              <a href="#" class="btn btn--custom">Đọc Thêm</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="asset/image/blog3.jpg" alt="Blog 3" />
+            <div class="desc-blog">
+              <span>Ngày 03 tháng 8, 2024</span>
+              <h4>Cà Phê Cùng Tony Review: Như Một Nồi Lẩu Thập Cẩm</h4>
+              <a href="#" class="btn btn--custom">Đọc Thêm</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="asset/image/blog4.jpg" alt="Blog 4" />
+            <div class="desc-blog">
+              <span>Ngày 23 tháng 2, 2024</span>
+              <h4>Sách Tài Chính Cá Nhân Dành Cho Người Việt Nam: Mua...</h4>
+              <a href="#" class="btn btn--custom">Đọc Thêm</a>
+            </div>
+          </div>
+
+          <!-- 4 boxs -->
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="newsletter">
+        <div class="contnaier">
+          <div class="text">
+            <h4>Đăng Ký Nhận Bản Tin</h4>
+            <p>
+              Nhận thông tin cập nhật qua email về các cuốn sách mới nhất, ưu
+              đãi đặc biệt từ BookStore!
+            </p>
+          </div>
+
+          <div class="subscribe-form">
+            <form action="">
+              <input type="email" placeholder="Nhập email của bạn ở đây..." />
+              <button class="btn btn--custom-srch">Đăng Ký</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer id="contact">
+    <div class="contnaier">
+      <div class="big-rows">
+        <p>
+          Cung cấp những cuốn sách chất lượng nhất với dịch vụ tận tâm. Khám
+          phá thế giới sách cùng chúng tôi!
+        </p>
+        <div class="coical-icon">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="title">Thông Tin</h2>
+        <div class="links">
+          <a href="#">Cửa Hàng Của Chúng Tôi</a>
+          <a href="#">Giới Thiệu</a>
+          <a href="#">Kinh Doanh</a>
+          <a href="#">Giao Hàng</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="title">Dịch Vụ</h2>
+        <div class="links">
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Chính sách bảo mật thông tin cá nhân</a>
+          <a href="#">Giới thiệu BookStore</a>
+          <a href="#">Hệ thống trung tâm - nhà sách</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="title">Liên hệ</h2>
+        <div class="links">
+          <p>Địa chỉ: 123 Đường ABC, Quận XYZ, Thành phố HCM</p>
+          <p>Số điện thoại: (012) 345-6789</p>
+          <p>Email: info@bookstore.com</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-footer">
+      <div class="content">
+        <p>&copy; 2024 | Tên tác giả</p>
+
+        <div class="payment-img">
+          <img src="asset/image/payment-1.png" alt="" />
+          <img src="asset/image/payment-2.png" alt="" />
+          <img src="asset/image/payment-3.png" alt="" />
+          <img src="asset/image/payment-4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="asset/js/script.js"></script>
+</body>
+
+</html>

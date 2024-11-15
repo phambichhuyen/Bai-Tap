@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookStore || Nhà sách trực tuyến</title>
+  
+    <!--Bootstrap 5 CSS -->
+    <link href="module/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Font Awesome 5-->
+    <link rel="stylesheet" href="module/fontawesome/css/all.min.css" />
+  
+    <!-- Popper -->
+  
+    <!--Bootstrap JS -->
+    <script src="module/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="module/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!--Jquery -->
+    <script src="module/jquery/jquery-3.7.1.min.js"></script>
+    <script src="module/jquery/jquery.validate.min.js"></script>
+  
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="asset/css/style.css" />
+  
+    <!-- link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+    <!-- put data in localstogaren -->
+    <script src="asset/js/data.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <nav class=" d-flex row w-100 m-auto px-lg-5 pb-3 pb-lg-0">
+        <!-- Logo -->
+        <div class="logo d-flex justify-content-center col-12 col-lg-auto pt-2 pt-lg-0">
+          <a href="index.html"><img src="asset/image/logo.jpg" alt="BookStore" width="125px" /></a>
+        </div>
+  
+        <!-- Thẻ xuống hàng Mobile -->
+        <div class="col-12 col-lg-auto">
+          <hr>
+        </div>
+  
+        <!-- Danh mục Pc -->
+        <div class="nav-links d-none d-lg-block col-lg">
+          <a href="index.html">Trang chủ</a>
+          <a href="produce.html">Sản phẩm</a>
+          <a href="imfomation.html">Giới thiệu</a>
+          <a href="#contact">Liên hệ</a>
+        </div>
+  
+        <!-- Danh mục Mobile - Btn -->
+        <div class="col-auto right-nav d-lg-none">
+          <i class="fas fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"></i>
+        </div>
+  
+        <!-- Danh mục Mobile - Container -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+              etc.
+            </div>
+            <div class="dropdown mt-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card & User - Icon -->
+        <div class="col col-lg-4 text-left">
+          <form action="" id="search-form">
+            <div class="input-group">
+              <input type="text" id="search-input" class="form-control" placeholder="Nhập tên sách..." aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="submit" id="Search"><i
+                  class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </form>
+        </div>
+  
+        <!-- Card & User - Container -->
+        <div class="right-nav d-flex col-auto">
+          <a href="#" class="d-none right-nav-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Tìm kiếm</span>
+          </a>
+          <a href="cart.html" class="cartyuyy right-nav-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Giỏ hàng</span>
+          </a>
+          <div class="dropdown">
+            <a class="right-nav-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user"></i>
+              <span id="user">Tài khoản</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="register.html">Đăng ký</a></li>
+              <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- conent -->
+    <section class="section home">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-lg-5">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h4>Đăng ký</h4>
+                        </div>
+                        <form action="" id="form_register">
+                            <div class="card-body">
+                                <div class="mb-3 text-start">
+                                    <label for="username" class="form-label">Tên người dùng</label>
+                                    <input type="text" class="form-control" id="username" name="username" required />
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="sdt" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" id="sdt" name="sdt" required />
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="address" class="form-label">Địa chỉ</label>
+                                    <input type="tel" class="form-control" id="address" name="address" required />
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="password" class="form-label">Mật khẩu</label>
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        required />
+                                </div>
+                                <button type="submit" class="btn btn--custom">Đăng ký</button>
+                                <div class="text-end mt-3">
+                                    <span>Đã có tài khoản?</span>
+                                    <a href="login.html">Đăng nhập</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <footer id="contact">
+    <div class="contnaier">
+      <div class="big-rows">
+        <p>
+          Cung cấp những cuốn sách chất lượng nhất với dịch vụ tận tâm. Khám
+          phá thế giới sách cùng chúng tôi!
+        </p>
+        <div class="coical-icon">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="title">Thông Tin</h2>
+        <div class="links">
+          <a href="#">Cửa Hàng Của Chúng Tôi</a>
+          <a href="#">Giới Thiệu</a>
+          <a href="#">Kinh Doanh</a>
+          <a href="#">Giao Hàng</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="title">Dịch Vụ</h2>
+        <div class="links">
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Chính sách bảo mật thông tin cá nhân</a>
+          <a href="#">Giới thiệu BookStore</a>
+          <a href="#">Hệ thống trung tâm - nhà sách</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2 class="title">Liên hệ</h2>
+        <div class="links">
+          <p>Địa chỉ: 123 Đường ABC, Quận XYZ, Thành phố HCM</p>
+          <p>Số điện thoại: (012) 345-6789</p>
+          <p>Email: info@bookstore.com</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bottom-footer">
+      <div class="content">
+        <p>&copy; 2024 | Tên tác giả</p>
+
+        <div class="payment-img">
+          <img src="asset/image/payment-1.png" alt="" />
+          <img src="asset/image/payment-2.png" alt="" />
+          <img src="asset/image/payment-3.png" alt="" />
+          <img src="asset/image/payment-4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="asset/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#form_register").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    sdt: {
+                        required: true,
+                        digits: true,
+                        minlength: 10,
+                        maxlength: 11,
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6,
+                    },
+                    address: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    username: {
+                        required: "Vui lòng nhập tên người dùng",
+                        minlength: "Tên người dùng phải có ít nhất 3 ký tự",
+                    },
+                    sdt: {
+                        required: "Vui lòng nhập số điện thoại",
+                        digits: "Số điện thoại chỉ chứa chữ số",
+                        minlength: "Số điện thoại phải có ít nhất 10 số",
+                        maxlength: "Số điện thoại không quá 11 số",
+                    },
+                    address: {
+                        required: "Vui lòng nhập địa chỉ",
+                    },
+                    password: {
+                        required: "Vui lòng nhập mật khẩu",
+                        minlength: "Mật khẩu phải có ít nhất 6 ký tự",
+                    },
+                },
+                submitHandler: function (form) {
+                    var username = $("#username").val();
+                    var sdt = $("#sdt").val();
+                    var password = $("#password").val();
+                    var address = $("#address").val();
+
+                    var users = JSON.parse(localStorage.getItem("user")) || [];
+                    var userExists = users.some((user) => user.username === username);
+                    if (userExists) {
+                        alert("Tên người dùng đã tồn tại!");
+                        return;
+                    }
+
+                    var userId = users.length > 0 ? Math.max(...users.map((user) => user.id)) + 1 : 1;
+                    users.push({ id: userId, username: username, sdt: sdt, password: password, address: address });
+                    localStorage.setItem("user", JSON.stringify(users));
+
+                    alert("Đăng ký thành công!");
+                    window.location.href = "login.html";
+
+                    form.reset();
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
